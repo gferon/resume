@@ -18,6 +18,7 @@
 % CONFIGURATIONS
 %-------------------------------------------------------------------------------
 \documentclass[10pt, a4paper]{awesome-cv}
+\usepackage{lastpage}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -38,7 +39,7 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 \name{Gabriel}{Féron}
-\position{Software Engineer}
+\position{Lead DevOps Engineer}
 % \address{}
 
 \mobile{(+49) 1517-283-1232}
@@ -47,6 +48,7 @@
 \gitlab{gferon}
 
 \begin{document}
+\raggedright
 
 \makecvheader
 
@@ -55,7 +57,7 @@
 \makecvfooter
 {\today}
 {/* Gabriel Féron · Curriculum Vitae */}
-{\thepage}
+{Page \thepage /\pageref{LastPage}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Experience
@@ -71,18 +73,19 @@
 	{since January 2019}
 	{
 		\begin{cvparagraph}
-			Member of the greater Routing Team (+40 people) responsible for developing routing services and data processing pipelines as well as maintaining core libraries, \textbf{designing APIs} and fixing various issues.
+			Member of the Routing Team (+40 people) responsible for developing routing services (trip planning and directions), data processing pipelines as well as maintaining core libraries, \textbf{designing APIs} and fixing various issues.
 		\end{cvparagraph}
 		\begin{cvitems}
 			\item {Designed, prototyped, developed and launched the \href{https://developer.here.com/documentation/large-matrix/api-reference-swagger.html}{Matrix Routing v8} service, \textbf{written in Rust}, as co team-lead.
 			            The service is designed as a set of \textbf{distributed micro-services in Kubernetes} using \textbf{Redis} as queue and cache storage.}
-			\item {Currently responsible, with a team of 4, for feature development and stability of the Matrix Routing v8 service.}
+			\item {Currently responsible in a team of 5 for feature development and stability of the Matrix Routing v8 service.}
 			\item {Helped foster the \textbf{introduction of Rust} to the team, starting in 2018.}
 			\item {Continuously pushed for \textbf{improving cross-role collaboration} (processes, tooling and team interaction).}
 			\item {Introduced \textbf{GitLab with CI/CD} to our team with minimal disruption to the existing developer work-flow.}
 		\end{cvitems}
 	}
 
+	\vspace{2pt}
 	\cventry
 	{Senior DevOps Engineer}
 	{from January 2017 to December 2018}
@@ -97,6 +100,10 @@
 			\item {Participated in the design and building of the current iteration of the CI system (\textbf{Gerrit} + \textbf{Jenkins}) used by all teams in Berlin.}
 		\end{cvitems}
 	}
+\end{cventries}
+
+\begin{cventries}
+
 
 	\cventrytitle
 	{Global Leads Group}
@@ -112,6 +119,10 @@
 			\item {Implemented a caching strategy and improved the performance of websites.}
 		\end{cvitems}
 	}
+
+\end{cventries}
+
+\begin{cventries}
 
 	\cventrytitle
 	{\href{https://www.lepape.com}{Lepape}}
@@ -130,6 +141,7 @@
 		\end{cvitems}
 	}
 \end{cventries}
+\vspace{4pt}
 
 \cvsection{Skills}
 \begin{cvskills}
@@ -138,15 +150,15 @@
 	{Rust, Python, Java}
 
 	\cvskill
-	{Systems administration}
-	{Linux, AWS, Fedora, Debian, Docker}
+	{Operating Systems}
+	{Linux (Fedora \& Debian)}
 
 	\cvskill
 	{Infrastructure}
-	{Kubernetes, Terraform, Ansible, Terraform}
+	{AWS, Docker, Kubernetes, Terraform, Ansible, Terraform}
 
 	\cvskill
-	{Event monitoring}
+	{Observability}
 	{Prometheus, Grafana, Elasticsearch, Kibana, Logstash}
 
 	\cvskill
@@ -203,8 +215,13 @@
 
 	\cventry
 	{Automated train supervision team}
-	{Jan. 2012 - Aug. 2012}
-	{Developed a WYSIWYG software in C++ 11 (Qt 4) to design \& run test-cases for parts of the train supervision system.}
+	{from January 2012 to August 2012}
+	{
+		\begin{cvparagraph}
+			Developed a WYSIWYG software in C++ 11 (Qt 4) to design \& run test-cases for parts of the train supervision system.
+		\end{cvparagraph}
+		\vspace{4pt}
+	}
 
 	\cventrytitle
 	{RATP (Autonomous Parisian Transportation Administration)}
@@ -212,8 +229,12 @@
 
 	\cventry
 	{Maintenance Department}
-	{Feb. 2011 - Aug. 2011}
-	{Developed a project management software to assist with regular planned escalator maintenance.}
+	{from February 2011 to August 2011}
+	{
+		\begin{cvparagraph}
+			Developed a project management software to assist with regular planned escalator maintenance.
+		\end{cvparagraph}
+	}
 
 \end{cventries}
 
@@ -226,8 +247,13 @@
 
 	\cventry
 	{Engineering Diploma (Masters) in Computer Science}
-	{Sep. 2007 – Jun. 2012}
-	{Studied software engineering \& electronic systems design.}
+	{from September 2007 to June 2012}
+	{
+		\begin{cvparagraph}
+			Studied software engineering \& electronic systems design.
+		\end{cvparagraph}
+		\vspace{4pt}
+	}
 
 	\cventrytitle
 	{University of Oslo}
@@ -235,8 +261,13 @@
 
 	\cventry
 	{Erasmus Semester in Multimedia Networking}
-	{Aug. 2011 – Jan. 2012}
-	{Studied heterogeneous multi-core architectures and multimedia networking using network processor cards.}
+	{from August 2011 to January 2012}
+	{
+		\begin{cvparagraph}
+			Studied heterogeneous multi-core architectures and multimedia networking using network processor cards.
+		\end{cvparagraph}
+		\vspace{4pt}
+	}
 
 	\cventrytitle
 	{Concordia University}
@@ -244,20 +275,27 @@
 
 	\cventry
 	{Semester abroad in Electrical Engineering}
-	{Aug 2009 – Dec 2009}
-	{Studied analog electronics circuit design and C++ development.}
+	{from August 2009 to December 2009}
+	{
+		\begin{cvparagraph}
+			Studied analog electronics circuit design and C++ development.
+		\end{cvparagraph}
+		\vspace{4pt}
+	}
 
 \end{cventries}
 
 \cvsection{Personal}
 
 \begin{cventries}
-	\begin{cvitems}
-		\item {Road biking}
-		\item {3D printing}
-		\item {Scuba-diving}
-		\item {I pour my milk in the bowl before the cereal}
-	\end{cvitems}
+	\descriptionstyle{
+		\begin{cvitems}
+			\item {Road biking}
+			\item {3D printing}
+			\item {Scuba-diving}
+			\item {I pour my milk in the bowl before the cereal}
+		\end{cvitems}
+	}
 \end{cventries}
 
 \end{document}

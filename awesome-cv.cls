@@ -175,7 +175,14 @@
 \newfontfamily\jetbrainsmono[
   Path=\@fontdir,
   UprightFont=*-Regular,
-  ItalicFont=*-Light-Italic,
+  ItalicFont=*-Italic,
+  BoldFont=*-Bold,
+  BoldItalicFont=*-Bold-Italic,
+]{JetBrainsMono}
+\newfontfamily\jetbrainsmonolight[
+  Path=\@fontdir,
+  UprightFont=*-SemiLight,
+  ItalicFont=*-SemiLight-Italic,
   BoldFont=*-Medium,
   BoldItalicFont=*-Medium-Italic,
 ]{JetBrainsMono}
@@ -186,6 +193,7 @@
 \newcommand*{\bodyfont}{\lato}
 \newcommand*{\bodyfontlight}{\latolight}
 \newcommand*{\monofont}{\jetbrainsmono}
+\newcommand*{\monofontlight}{\jetbrainsmonolight}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
@@ -197,12 +205,12 @@
 \newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\monofont\scshape\color{awesome} #1}}
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
-\newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1em}\bodyfont\itshape\color{darktext} #1}}
+\newcommand*{\headerquotestyle}[1]{{\fontsize{10pt}{1.0em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
 \renewcommand \dotfill {\leavevmode \cleaders \hb@xt@ .33em{\hss \monofont.\hss }\hfill \kern \z@}
 \newcommand*{\sectionstyle}[1]{{\fontsize{18pt}{1em}\bodyfont\bfseries\color{text} #1}}
-\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\textcolor{text}{#1}}}
-\newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
+\newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\monofontlight\textcolor{lighttext}{#1}}}
+\newcommand*{\paragraphstyle}{\fontsize{9pt}{1.1em}\bodyfontlight\upshape\color{text}}
 
 % For elements of entry
 \newcommand*{\entrytitlestyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\color{darktext} #1}}
@@ -559,54 +567,64 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \vspace{8pt}
   \sectionstyle{#1}
   \phantomsection
   \color{gray}\dotfill
+  \par
+  \parskip=8pt
 }
 
 % Define a subsection for CV
 % Usage: \cvsubsection{<subsection-title>}
 \newcommand{\cvsubsection}[1]{%
-  \vspace{4pt}
   \subsectionstyle{#1}
   \phantomsection
+  \par
+  \parskip=6pt
 }
 
 % Define a paragraph for CV
 \newenvironment{cvparagraph}{%
-  \vspace{4pt}
-  % \par
-  % \paragraphstyle
+  \paragraphstyle
 }{%
+  \par
+  \parskip=4pt
 }
 
-% Define an environment for cventry
+% Define an environment for a block of entries
 \newenvironment{cventries}{%
-  \begin{flushleft}
 }{%
-  \end{flushleft}
+  \vspace{4pt}
 }
-% Define the title of a CV entry
+
+
+% Define the title (job) of a CV entry
 % Usage: \cventrytitle{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventrytitle}[2]{%
-  \vspace{4pt}
   \entrytitlestyle{#1} \ \entrylocationstyle{#2}
-  \\
+  \par
+  \parskip=2pt
+}
+
+% Define a position (junior, senior, lead, etc.) for a CV entry
+\newcommand*{\cventry}[3]{%
+  \entrypositionstyle{#1} \ \entrydatestyle{#2}
+  \par
+  \parskip=4pt
+  \descriptionstyle{#3}
+  \par
+  \parskip=4pt
 }
 
 % Define a role within a CV entry
 % Usage: \cventry{<position>}{<date>}{<description>}
-\newcommand*{\cventry}[3]{%
-  \vspace{4pt}
-  \entrypositionstyle{#1} \ \entrydatestyle{#2}
-  \\
-  \descriptionstyle{#3}
-}
+% \newcommand*{\cventry}[1]{%
+%   \par
+%   \parskip=4pt
+% }
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \vspace{4pt}
   \begin{center}
     \setlength\tabcolsep{2pt}
     \setlength{\extrarowheight}{6pt}
@@ -614,7 +632,6 @@
 }{%
     \end{tabular*}
   \end{center}
-  \vspace{8pt}
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
@@ -624,9 +641,8 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{4pt}
   \begin{itemize}[leftmargin=3ex, nosep, label=//]
-    \setlength\itemsep{1mm}
+    \setlength\itemsep{2pt}
 }{%
   \end{itemize}
 }

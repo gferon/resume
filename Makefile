@@ -18,3 +18,6 @@ fonts: Lato.zip JetBrainsMono.zip fonts/FontAwesome.ttf
 
 pdf:
 	xelatex resume.tex
+
+pdfencrypt: resume.pdf
+	qpdf resume.pdf --encrypt "" `pwgen 24` 256 --print=full --extract=y --modify=none -- outfile.pdf
