@@ -1,0 +1,263 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% Author:
+% Gabriel Féron <feron.gabriel@gmail.com>
+%
+% Many thanks to https://twitter.com/thefakeincabell
+% for the free design advice!
+%
+% Forked from the awesome template from posquit0
+% https://github.com/posquit0/Awesome-CV
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+\documentclass[10pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-concrete}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+\name{Gabriel}{Féron}
+\position{Software Engineer}
+% \address{}
+
+\mobile{(+49) 1517-283-1232}
+\email{feron.gabriel@gmail.com}
+\github{gferon}
+\gitlab{gferon}
+
+\begin{document}
+
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+{\today}
+{/* Gabriel Féron · Curriculum Vitae */}
+{\thepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Experience}
+\begin{cventries}
+	\cventrytitle
+	{\href{https://developer.here.com}{HERE Technologies}}
+	{Berlin, Germany}
+
+	\cventry
+	{Lead DevOps Engineer}
+	{since January 2019}
+	{
+		\begin{cvparagraph}
+			Member of the greater Routing Team (+40 people) responsible for developing routing services and data processing pipelines as well as maintaining core libraries, \textbf{designing APIs} and fixing various issues.
+		\end{cvparagraph}
+		\begin{cvitems}
+			\item {Designed, prototyped, developed and launched the \href{https://developer.here.com/documentation/large-matrix/api-reference-swagger.html}{Matrix Routing v8} service, \textbf{written in Rust}, as co team-lead.
+			            The service is designed as a set of \textbf{distributed micro-services in Kubernetes} using \textbf{Redis} as queue and cache storage.}
+			\item {Currently responsible, with a team of 4, for feature development and stability of the Matrix Routing v8 service.}
+			\item {Helped foster the \textbf{introduction of Rust} to the team, starting in 2018.}
+			\item {Continuously pushed for \textbf{improving cross-role collaboration} (processes, tooling and team interaction).}
+			\item {Introduced \textbf{GitLab with CI/CD} to our team with minimal disruption to the existing developer work-flow.}
+		\end{cvitems}
+	}
+
+	\cventry
+	{Senior DevOps Engineer}
+	{from January 2017 to December 2018}
+	{
+		\begin{cvitems}
+			\item {Together with a team of 5, \textbf{responsible for the testing strategies, deployment pipelines and functioning} of all the \textbf{high-traffic Routing services} used by hundreds of customers around the world.}
+			\item {Introduced \textbf{infrastructure as code} in the team.}
+			\item {Active member of a cross-team effort to refactor \& maintain the \textbf{CMake build-system} used to assemble hundreds of C++ components developed by location service teams (Rendering, Routing, Traffic, Navigation).}
+			\item {Migrated the test libraries for \textbf{Robot Framework} used by the team from Python 2 to \textbf{Python 3}.}
+			\item {Pushed for and setup \textbf{continuous deployment} (release processes and pipelines) for the 3 main Routing services.}
+			\item {Designed and deployed a tool used to help all teams share \textbf{Docker images}, propagate updates and re-use existing layers.}
+			\item {Participated in the design and building of the current iteration of the CI system (\textbf{Gerrit} + \textbf{Jenkins}) used by all teams in Berlin.}
+		\end{cvitems}
+	}
+
+	\cventrytitle
+	{Global Leads Group}
+	{Berlin, Germany}
+
+	\cventry
+	{Systems Engineer}
+	{from November 2015 to September 2016}
+	{
+		\begin{cvitems}
+			\item {Migrated all dedicated servers to cloud-hosting (AWS), dividing the hosting budget by 5 while improving resilience and scalability.}
+			\item {Developed a custom continuous integration pipeline integrated with Jenkins, Slack and Bitbucket using Python and the Docker API.}
+			\item {Implemented a caching strategy and improved the performance of websites.}
+		\end{cvitems}
+	}
+
+	\cventrytitle
+	{\href{https://www.lepape.com}{Lepape}}
+	{Paris, France}
+
+	\cventry
+	{Software Developer}
+	{from August 2012 to November 2015}
+	{
+		\begin{cvitems}
+			\item {Setup a new dedicated hosting platform to withstand sales traffic spikes as well as its monitoring, failure and recovery strategy.}
+			\item {Setup logging persistence and dashboards with Elasticsearch, Logstash and Kibana.}
+			\item {Improved performance of the main e-commerce website, running Magento.}
+			\item {Developed a payment transactions and order processing API for the back-office.}
+			\item {Designed and developed a product catalog application in Java and MongoDB managing every product sold in the company's stores.}
+		\end{cvitems}
+	}
+\end{cventries}
+
+\cvsection{Skills}
+\begin{cvskills}
+	\cvskill
+	{Programming}
+	{Rust, Python, Java}
+
+	\cvskill
+	{Systems administration}
+	{Linux, AWS, Fedora, Debian, Docker}
+
+	\cvskill
+	{Infrastructure}
+	{Kubernetes, Terraform, Ansible, Terraform}
+
+	\cvskill
+	{Event monitoring}
+	{Prometheus, Grafana, Elasticsearch, Kibana, Logstash}
+
+	\cvskill
+	{Build tools \& CI}
+	{GitLab CI, Jenkins, CMake, RPM}
+
+	\cvskill
+	{Languages}
+	{French (\emph{Native}), English (\emph{Fluent}), German (\emph{Basic})}
+\end{cvskills}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Projects}
+\begin{cventries}
+	\cventrytitle
+	{Open-source contributions}
+	{}
+
+	\cventry
+	{Fedora Project}
+	{since January 2018}
+	{
+		\begin{cvitems}
+			\item{\href{https://src.fedoraproject.org/rpms/cura}{Packager of Cura for Fedora Linux}, a 3D printer slicing software}
+		\end{cvitems}
+	}
+
+	\cventry
+	{GitHub}
+	{since 2012}
+	{
+		\begin{cvitems}
+			\item {Many small fixes in various projects}
+			\item {Rust \href{https://github.com/gferon/rustberrypi-playground}{device drivers for some} RaspberryPi \href{https://github.com/gferon/am2320.rs}{peripherals} from Adafruit}
+			\item {Contributor to Flatdata, a fast read-only serialization \& deserialization library open-sourced during my work at HERE}
+			\item {Improvements the Rust OpenAPI generator}
+		\end{cvitems}
+	}
+\end{cventries}
+
+\cvsection{Education}
+
+\cvsubsection{Internships}
+
+\begin{cventries}
+
+	\cventrytitle
+	{Alstom Transport}
+	{Saint-Ouen, France}
+
+	\cventry
+	{Automated train supervision team}
+	{Jan. 2012 - Aug. 2012}
+	{Developed a WYSIWYG software in C++ 11 (Qt 4) to design \& run test-cases for parts of the train supervision system.}
+
+	\cventrytitle
+	{RATP (Autonomous Parisian Transportation Administration)}
+	{Saint-Denis, France}
+
+	\cventry
+	{Maintenance Department}
+	{Feb. 2011 - Aug. 2011}
+	{Developed a project management software to assist with regular planned escalator maintenance.}
+
+\end{cventries}
+
+\cvsubsection{Curriculum}
+
+\begin{cventries}
+	\cventrytitle
+	{ECE Paris}
+	{Paris, France}
+
+	\cventry
+	{Engineering Diploma (Masters) in Computer Science}
+	{Sep. 2007 – Jun. 2012}
+	{Studied software engineering \& electronic systems design.}
+
+	\cventrytitle
+	{University of Oslo}
+	{Oslo, Norway}
+
+	\cventry
+	{Erasmus Semester in Multimedia Networking}
+	{Aug. 2011 – Jan. 2012}
+	{Studied heterogeneous multi-core architectures and multimedia networking using network processor cards.}
+
+	\cventrytitle
+	{Concordia University}
+	{Montréal, Canada}
+
+	\cventry
+	{Semester abroad in Electrical Engineering}
+	{Aug 2009 – Dec 2009}
+	{Studied analog electronics circuit design and C++ development.}
+
+\end{cventries}
+
+\cvsection{Personal}
+
+\begin{cventries}
+	\begin{cvitems}
+		\item {Road biking}
+		\item {3D printing}
+		\item {Scuba-diving}
+		\item {I pour my milk in the bowl before the cereal}
+	\end{cvitems}
+\end{cventries}
+
+\end{document}
