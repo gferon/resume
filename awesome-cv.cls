@@ -627,11 +627,12 @@
 \newenvironment{cvskills}{%
   \begin{center}
     \setlength\tabcolsep{2pt}
-    \setlength{\extrarowheight}{6pt}
+    \setlength{\extrarowheight}{3pt}
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
 }{%
     \end{tabular*}
   \end{center}
+  \vspace{6pt}
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}

@@ -76,11 +76,11 @@
 			Member of the Routing Team (+40 people) responsible for developing routing services (trip planning and directions), data processing pipelines as well as maintaining core libraries, \textbf{designing APIs} and fixing various issues.
 		\end{cvparagraph}
 		\begin{cvitems}
-			\item {Designed, prototyped, developed and launched the \href{https://developer.here.com/documentation/large-matrix/api-reference-swagger.html}{Matrix Routing v8} service, \textbf{written in Rust}, as co team-lead.
+			\item {Designed, prototyped, developed and launched the \href{https://developer.here.com/documentation/large-matrix/api-reference-swagger.html}{Matrix Routing v8} service, \textbf{written in Rust}, as a team lead.
 			            The service is designed as a set of \textbf{distributed micro-services in Kubernetes} using \textbf{Redis} as queue and cache storage.}
-			\item {Currently responsible in a team of 5 for feature development and stability of the Matrix Routing v8 service.}
+			\item {Currently responsible for \textbf{feature development and stability} of the \href{https://developer.here.com/documentation/large-matrix/api-reference-swagger.html}{Matrix Routing v8} service.}
 			\item {Helped foster the \textbf{introduction of Rust} to the team, starting in 2018.}
-			\item {Continuously pushed for \textbf{improving cross-role collaboration} (processes, tooling and team interaction).}
+			\item {Continuously pushed for \textbf{improving cross-role collaboration} to enable developers to \textbf{own their changes end to end}.}
 			\item {Introduced \textbf{GitLab with CI/CD} to our team with minimal disruption to the existing developer work-flow.}
 		\end{cvitems}
 	}
@@ -91,19 +91,18 @@
 	{from January 2017 to December 2018}
 	{
 		\begin{cvitems}
-			\item {Together with a team of 5, \textbf{responsible for the testing strategies, deployment pipelines and functioning} of all the \textbf{high-traffic Routing services} used by hundreds of customers around the world.}
-			\item {Introduced \textbf{infrastructure as code} in the team.}
-			\item {Active member of a cross-team effort to refactor \& maintain the \textbf{CMake build-system} used to assemble hundreds of C++ components developed by location service teams (Rendering, Routing, Traffic, Navigation).}
+			\item {Responsible for the \textbf{testing strategy, deployment pipelines and functioning} of all the \textbf{high-traffic Routing services} used by hundreds of customers around the world.}
+			\item {Introduced \textbf{infrastructure as code} in the team using \textbf{Terraform}.}
+			\item {Active member of a cross-team effort to refactor and maintain the \textbf{CMake build-system} used to assemble hundreds of C++ components developed by location service teams (Rendering, Routing, Traffic, Navigation).}
 			\item {Migrated the test libraries for \textbf{Robot Framework} used by the team from Python 2 to \textbf{Python 3}.}
-			\item {Pushed for and setup \textbf{continuous deployment} (release processes and pipelines) for the 3 main Routing services.}
-			\item {Designed and deployed a tool used to help all teams share \textbf{Docker images}, propagate updates and re-use existing layers.}
-			\item {Participated in the design and building of the current iteration of the CI system (\textbf{Gerrit} + \textbf{Jenkins}) used by all teams in Berlin.}
+			\item {Pushed for and setup \textbf{continuous deployment} (release processes \& pipelines) for the three main Routing services.}
+			\item {Designed and deployed a tool to help all teams share \textbf{Docker images}, propagate updates and re-use existing layers.}
+			\item {Participated in the development of the current iteration of the CI system (\textbf{Gerrit} + \textbf{Jenkins}) used by all teams in HERE Berlin.}
 		\end{cvitems}
 	}
 \end{cventries}
 
 \begin{cventries}
-
 
 	\cventrytitle
 	{Global Leads Group}
@@ -114,9 +113,8 @@
 	{from November 2015 to September 2016}
 	{
 		\begin{cvitems}
-			\item {Migrated all dedicated servers to cloud-hosting (AWS), dividing the hosting budget by 5 while improving resilience and scalability.}
+			\item {Migrated all dedicated servers to AWS, dividing the hosting budget by 5 while improving resilience and scalability.}
 			\item {Developed a custom continuous integration pipeline integrated with Jenkins, Slack and Bitbucket using Python and the Docker API.}
-			\item {Implemented a caching strategy and improved the performance of websites.}
 		\end{cvitems}
 	}
 
@@ -134,43 +132,14 @@
 	{
 		\begin{cvitems}
 			\item {Setup a new dedicated hosting platform to withstand sales traffic spikes as well as its monitoring, failure and recovery strategy.}
-			\item {Setup logging persistence and dashboards with Elasticsearch, Logstash and Kibana.}
-			\item {Improved performance of the main e-commerce website, running Magento.}
+			\item {Setup logging persistence and monitoring dashboards with Elasticsearch, Logstash and Kibana.}
+			\item {Improved performance of the Magento e-commerce website by optimizing backend code and database queries.}
 			\item {Developed a payment transactions and order processing API for the back-office.}
 			\item {Designed and developed a product catalog application in Java and MongoDB managing every product sold in the company's stores.}
 		\end{cvitems}
 	}
 \end{cventries}
-\vspace{4pt}
-
-\cvsection{Skills}
-\begin{cvskills}
-	\cvskill
-	{Programming}
-	{Rust, Python, Java}
-
-	\cvskill
-	{Operating Systems}
-	{Linux (Fedora \& Debian)}
-
-	\cvskill
-	{Infrastructure}
-	{AWS, Docker, Kubernetes, Terraform, Ansible, Terraform}
-
-	\cvskill
-	{Observability}
-	{Prometheus, Grafana, Elasticsearch, Kibana, Logstash}
-
-	\cvskill
-	{Build tools \& CI}
-	{GitLab CI, Jenkins, CMake, RPM}
-
-	\cvskill
-	{Languages}
-	{French (\emph{Native}), English (\emph{Fluent}), German (\emph{Basic})}
-\end{cvskills}
-
-\newpage
+\vspace{6pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Projects
@@ -195,14 +164,46 @@
 	{since 2012}
 	{
 		\begin{cvitems}
-			\item {Many small fixes in various projects}
-			\item {Rust \href{https://github.com/gferon/rustberrypi-playground}{device drivers for some} RaspberryPi \href{https://github.com/gferon/am2320.rs}{peripherals} from Adafruit}
-			\item {Contributor to Flatdata, a fast read-only serialization \& deserialization library open-sourced during my work at HERE}
-			\item {Improvements the Rust OpenAPI generator}
+			\item {\href{https://github.com/gferon/rustberrypi-playground}{Rust device drivers for some} RaspberryPi \href{https://github.com/gferon/am2320.rs}{peripherals} from Adafruit}
+			\item {\href{https://github.com/mitsuhiko/redis-rs/pull/305}{Added support for TLS in the Rust redis client}}
+			\item {\href{https://github.com/OpenAPITools/openapi-generator/pulls?q=is\%3Apr+author\%3Agferon+is\%3Aclosed}{Improvements to the Rust OpenAPI generator}}
+			\item {Contributor to \href{https://github.com/heremaps/flatdata}{Flatdata, a fast read-only serialization \& deserialization library} open-sourced during my work at HERE}
 		\end{cvitems}
 	}
 \end{cventries}
+\vspace{6pt}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Skills
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cvsection{Skills}
+\begin{cvskills}
+	\cvskill
+	{Programming}
+	{Rust, Python, Java}
+
+	\cvskill
+	{Operating systems}
+	{Linux (Fedora \& Debian)}
+
+	\cvskill
+	{Infrastructure}
+	{AWS, Docker, Kubernetes, Terraform, Ansible}
+
+	\cvskill
+	{Observability}
+	{Prometheus, Grafana, Elasticsearch, Kibana, Logstash}
+
+	\cvskill
+	{Build tools \& CI}
+	{GitLab CI, Jenkins, Gerrit, GitHub, CMake, RPM}
+
+	\cvskill
+	{Languages}
+	{French (\emph{Native}), English (\emph{Fluent}), German (\emph{Basic})}
+\end{cvskills}
+
+\newpage
 \cvsection{Education}
 
 \cvsubsection{Internships}
@@ -292,7 +293,7 @@
 		\begin{cvitems}
 			\item {Road biking}
 			\item {3D printing}
-			\item {Scuba-diving}
+			\item {Scuba diving}
 			\item {I pour my milk in the bowl before the cereal}
 		\end{cvitems}
 	}
